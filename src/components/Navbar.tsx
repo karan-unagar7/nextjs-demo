@@ -18,13 +18,15 @@ export default function Navbar() {
                         <span className="mr-4">
                             Welcome, {user.username || user.email}
                         </span>
-                        <Button onClick={() => signOut()} className="w-full md:w-auto bg-slate-100 rounded cursor-pointer text-black" style={{ padding: '5px 8px' }}>
+                        {/* <Button onClick={() => signOut()} className="w-full md:w-auto bg-slate-100 rounded cursor-pointer text-black" style={{ padding: '5px 8px' }}>
                             Logout
-                        </Button>
+                        </Button> */}
+                        <Link href="/" onClick={()=>signOut()} className="bg-slate-100 rounded text-black cursor-pointer px-3 py-1">Log-Out
+                        </Link>
                     </>
                 ) : (
-                    <Link href="/sign-in">
-                        <Button className="w-full md:w-auto bg-slate-100 rounded text-black cursor-pointer" style={{ padding: '5px 8px' }}>Login</Button>
+                    <Link href="/sign-in" className="bg-slate-100 rounded text-black cursor-pointer px-3 py-1">Login
+                        {/* <Button className="w-full md:w-auto bg-slate-100 rounded text-black cursor-pointer" style={{ padding: '5px 8px' }}>Login</Button> */}
                     </Link>
 
                 )}

@@ -290,7 +290,7 @@ export default function SignUpForm() {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Username</FormLabel>
+                                    <FormLabel className='text-black'>Username</FormLabel>
                                     <Input
                                         {...field}
                                         onChange={(e) => {
@@ -318,9 +318,8 @@ export default function SignUpForm() {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Email</FormLabel>
+                                    <FormLabel className='text-black'>Email</FormLabel>
                                     <Input {...field} name="email" />
-                                    <p className='text-muted text-gray-400 text-sm'>We will send you a verification code</p>
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -331,7 +330,7 @@ export default function SignUpForm() {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Password</FormLabel>
+                                    <FormLabel className='text-black'>Password</FormLabel>
                                     <Input type="password" {...field} name="password" />
                                     <FormMessage />
                                 </FormItem>
